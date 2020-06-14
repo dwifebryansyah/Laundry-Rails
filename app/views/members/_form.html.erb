@@ -1,0 +1,37 @@
+<%= form_with(model: member, local: true) do |form| %>
+  <% if member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+        <% member.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nama %>
+    <%= form.text_field :nama %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alamat %>
+    <%= form.text_area :alamat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jenis_kelamin %>
+    <%= form.text_field :jenis_kelamin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tlp %>
+    <%= form.text_field :tlp %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

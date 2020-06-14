@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @member.nama %>
+</p>
+
+<p>
+  <strong>Alamat:</strong>
+  <%= @member.alamat %>
+</p>
+
+<p>
+  <strong>Jenis kelamin:</strong>
+  <%= @member.jenis_kelamin %>
+</p>
+
+<p>
+  <strong>Tlp:</strong>
+  <%= @member.tlp %>
+</p>
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>
